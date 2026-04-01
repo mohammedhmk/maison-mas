@@ -17,7 +17,7 @@ export const abayas: Abaya[] = [
     nameAr: "سِحر المواريه",
     fabric: "Premium Jacquard Moiré",
     fabricAr: "جاكار مواريه فاخر",
-    price: "١٬٨٠٠ ر.س",
+    price: "١٬٥٠٠ ر.س",
     description:
       "A masterpiece of understated elegance — crafted from luxurious Jacquard Moiré fabric with captivating water-like ripples. A refined mandarin collar grants you an unforgettable regal presence.",
     descriptionAr:
@@ -56,7 +56,7 @@ export const abayas: Abaya[] = [
     nameAr: "لوحة الغيم",
     fabric: "Linen-Viscose with Digital Print",
     fabricAr: "كتان وفيسكوز بطباعة رقمية",
-    price: "١٬٨٠٠ ر.س",
+    price: "١٬٥٠٠ ر.س",
     description:
       "Like a carefully painted canvas — premium linen-viscose fabric adorned with precise digital prints of captivating grey gradients, making your abaya unique and distinctive.",
     descriptionAr:
