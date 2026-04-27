@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* ─── Theme Tokens ─── */
+@theme inline {
+  --color-dark: #050505;
+  --color-champagne: #D4AF37;
+  --color-champagne-light: #e8cf8a;
+  --color-cream: #f5f0e8;
+  --font-cinzel: "Cinzel", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* ─── Base Resets ─── */
+* {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #050505;
+}
+
+html {
+  background-color: #050505;
+}
+
+body {
+  background-color: #050505;
+  color: #f5f0e8;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 2px;
+}
+
+/* ─── Utility Animations ─── */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Magnetic Button Styles ─── */
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #D4AF37, #b8960e);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.magnetic-btn:hover::before {
+  opacity: 1;
+}
+
+.magnetic-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Hero CTA Button ─── */
+.hero-cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  letter-spacing: 0.15em;
+}
+
+.hero-cta-btn:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+/* ─── Mobile: Product layout (single column) ─── */
+@media (max-width: 767px) {
+  /* Force vertical layout on mobile */
+  .abaya-product-grid {
+    flex-direction: column !important;
+  }
+
+  /* Image takes full width on mobile */
+  .abaya-image-side {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Text side full width */
+  .abaya-text-side {
+    width: 100% !important;
+  }
+}
+
+/* ─── Tailwind bg/opacity utilities missing shorthands ─── */
+.bg-champagne\/3 {
+  background-color: rgba(212, 175, 55, 0.03);
+}
+
+.bg-champagne\/8 {
+  background-color: rgba(212, 175, 55, 0.08);
+}
+
+/* ─── Reviews section card hover fix ─── */
+.group:hover .group-hover\:text-champagne {
+  color: #D4AF37;
+}
