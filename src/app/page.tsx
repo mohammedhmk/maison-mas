@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import HorizontalGallery from "@/components/HorizontalGallery";
@@ -50,6 +51,7 @@ export default function Home() {
     <main className="relative">
       <CustomCursor />
       <Preloader />
+      <AnnouncementBar />
       <Navbar />
       <Hero />
       <HorizontalGallery />

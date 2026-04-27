@@ -20,8 +20,8 @@ const reviews = [
     name: "ريم القحطاني",
     city: "جدة",
     abaya: "النسيم الزمردي",
-    rating: 5,
-    text: "كنت مترددة بسبب السعر، لكن لما لبستها فهمت ليش تستاهل. جودة تنافس أكبر الدور العالمية — القماش ناعم ومتنفس وانسيابيته رائعة. الحزام يبرز القوام بشكل جميل.",
+    rating: 4,
+    text: "كنت مترددة بسبب السعر في البداية، لكن لما وصلت العباية اقتنعت تماماً. الجودة تستاهل وأكثر.",
   },
   {
     id: 3,
@@ -33,9 +33,9 @@ const reviews = [
   },
 ];
 
-function StarIcon() {
+function StarIcon({ filled = true }: { filled?: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-champagne" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 ${filled ? "fill-champagne" : "fill-champagne/20"}`} aria-hidden="true">
       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   );
@@ -109,8 +109,8 @@ export default function ReviewsSection() {
 
               {/* Stars */}
               <div className="mb-4 flex gap-0.5">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <StarIcon key={i} />
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <StarIcon key={i} filled={i < review.rating} />
                 ))}
               </div>
 

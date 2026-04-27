@@ -102,7 +102,7 @@ export default function Hero() {
         <div className="mt-8 opacity-0">
           <button
             onClick={scrollToCollection}
-            className="hero-cta-btn group inline-flex items-center gap-3 border border-champagne/50 px-8 py-4 font-inter text-sm tracking-[0.2em] text-champagne transition-all duration-500 hover:bg-champagne hover:text-dark hover:border-champagne"
+            className="hero-cta-btn group inline-flex items-center gap-3 bg-champagne border border-champagne px-8 py-4 font-inter text-sm tracking-[0.2em] text-dark transition-all duration-500 hover:brightness-90"
             data-cursor="expand"
           >
             اكتشفي المجموعة
